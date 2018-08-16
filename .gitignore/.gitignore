@@ -1,0 +1,8 @@
+function meal_assets() {
+    wp_enqueue_style( "bootstrap-css", get_theme_file_uri( "/assets/css/bootstrap.css" ), null, "1.0" );
+    wp_enqueue_style( "meal-css", get_stylesheet_uri(), null, VERSION );
+
+    wp_enqueue_script( "migrate-js", get_theme_file_uri( "/assets/js/jquery-migrate-3.0.1.min.js" ), array( "jquery" ), "3.0.1", true );
+}
+
+add_action( "wp_enqueue_scripts", "meal_assets" );
